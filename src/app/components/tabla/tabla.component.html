@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="section"></div>
+    <div class="col s12 center">
+        <h4 class="seccion light-blue-text text-darken-4">Estadísticas de México</h4>
+    </div>
+
+    <table class="highlight centered responsive-table">
+        <thead class="light-blue darken-1">
+            <tr>
+                <th rowspan="2" class="light-blue darken-3 white-text">Nombre</th>
+                <th rowspan="2" class="light-blue darken-3 white-text">Código</th>
+                <th rowspan="2" class="light-blue darken-3 white-text">Fecha</th>
+                <th class="light-blue darken-3 white-text" colspan="2">Hoy</th>
+                <th class="light-blue darken-3 white-text" colspan="3">Pasados</th>
+            </tr>
+            <tr>
+                <th class="white-text">Decesos</th>
+                <th class="white-text">Confirmados</th>
+                <th class="white-text">Decesos</th>
+                <th class="white-text">Confirmados</th>
+                <th class="white-text">Recuperados</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let tabla of timeline">
+                <td>{{countries[0][1].name}}</td>
+                <td>{{countries[0][1].code}}</td>
+                <td>{{tabla[1].updated_at}}</td>
+                <td>{{tabla[1].new_deaths}}</td>
+                <td>{{tabla[1].new_confirmed}}</td>
+                <td>{{tabla[1].deaths}}</td>
+                <td>{{tabla[1].confirmed}}</td>
+                <td>{{tabla[1].recovered}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
